@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice numéro 1</title>
+</head>
+<body>
+
+  <h1>L'exercice numéro 1</h1>
+
+  <h2>Visualisation depuis Wikidata</h2>
+  <img src="https://raw.githubusercontent.com/Marcel-Bautista-Kuljevan/Exercice1-datavis-P8/89a4b87a7ad8d728c2b8efa8e38a21f1f6c06e6c/visualisationwikidata.svg" alt="Visualisation depuis Wikidata">
+
+  <h2>Visualisation depuis Rawgraphs</h2>
+  <img src="https://raw.githubusercontent.com/Marcel-Bautista-Kuljevan/Exercice1-datavis-P8/89a4b87a7ad8d728c2b8efa8e38a21f1f6c06e6c/visualisationrawgraphs.svg" alt="Visualisation depuis Rawgraphs">
+
+  <h2>Tableau des données brutes extraites depuis Wikidata</h2>
+  <!-- Intégration directe de la requête SPARQL Wikidata -->
+  <iframe width="100%" height="600px" src="https://query.wikidata.org/embed.html?query=SELECT%20%3FnationalityLabel%20(COUNT(%3Fperson)%20as%20%3Fcount)%0AWHERE%20%7B%0A%20%20%3Fperson%20wdt%3AP31%20wd%3AQ5%3B%20%23%20%C3%8Atre%20humain%0A%20%20%20%20%20%20%20%20%20%20p%3AP166%20%3Fstatement.%0A%20%20%3Fstatement%20ps%3AP166%20wd%3AQ37922%3B%20%23%20Prix%20Nobel%0A%20%20OPTIONAL%20%7B%20%3Fperson%20wdt%3AP27%20%3Fnationality.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D%0AGROUP%20BY%20%3FnationalityLabel%0AORDER%20BY%20DESC(%3Fcount)%0A"></iframe>
+
+</body>
+</html>
